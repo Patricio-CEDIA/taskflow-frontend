@@ -5,7 +5,7 @@ function TaskCard({ id, title, status, onCambiarEstado }) {
     completada: null,
   };
 
-  // Paso 3: borra el return de abajo y descomenta el bloque completo
+  // Paso 2: borra el return de abajo y descomenta el bloque completo
   // (título + badge de estado + botón "Avanzar").
   return <div className="task-card">{title}</div>;
 

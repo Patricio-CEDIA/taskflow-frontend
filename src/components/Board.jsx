@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import { mockTasks } from '../data/mockTasks';
+import { useState, useEffect } from 'react';
+import api from '../services/api';
 import Column from './Column';
 
 function Board() {
-  const [tasks, setTasks] = useState(mockTasks);
+  const [tasks, setTasks] = useState([]);
   const [nuevoTitulo, setNuevoTitulo] = useState('');
 
-  // Paso 3: borra la línea de abajo y descomenta cambiarEstado() completo.
+  // Paso 2: borra la línea de abajo y descomenta cambiarEstado() completo.
   const cambiarEstado = () => {};
   // const cambiarEstado = (id, nuevoEstado) => {
   //   setTasks(tasks.map((t) => (t.id === id ? { ...t, status: nuevoEstado } : t)));
   // };
 
-  // Paso 4: borra la línea de abajo y descomenta agregarTarea() completo.
+  // Paso 3: borra la línea de abajo y descomenta agregarTarea() completo.
   const agregarTarea = (e) => { e.preventDefault(); };
   // const agregarTarea = (e) => {
   //   e.preventDefault();
@@ -20,6 +20,13 @@ function Board() {
   //   setTasks([...tasks, { id: Date.now(), title: nuevoTitulo, status: 'pendiente' }]);
   //   setNuevoTitulo('');
   // };
+
+  // Paso 5: borra la línea de abajo y descomenta el useEffect completo, que
+  // carga las tareas reales desde la API al aparecer el tablero en pantalla.
+  useEffect(() => {}, []);
+  // useEffect(() => {
+  //   api.get('/tasks').then((response) => setTasks(response.data.data));
+  // }, []);
 
   const pendientes = tasks.filter((t) => t.status === 'pendiente');
   const enProgreso = tasks.filter((t) => t.status === 'en_progreso');

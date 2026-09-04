@@ -9,7 +9,7 @@ Cada rama `sesion-NN` es el punto de partida de la práctica de esa sesión: con
 **Importante:** este repo no incluye el esqueleto completo que genera Vite (`vite.config.js`, `index.html` y `package.json` sí están, pero no cada archivo que Vite regenera solo, como `public/`). El flujo es:
 
 ```bash
-npm create vite@latest taskflow-frontend -- --template react   # Sesión 4, una sola vez
+npm create vite@latest taskflow-frontend -- --template react   # Sesión 6, una sola vez
 cd taskflow-frontend
 # copia dentro de esta carpeta los archivos de la rama de tu sesión actual,
 # reemplazando los que correspondan (src/)
@@ -21,8 +21,7 @@ npm run dev
 
 | Rama | Punto de partida para | Qué agrega/completa esa sesión |
 |---|---|---|
-| `sesion-04` | Sesión 4 — React | Crear el proyecto Vite y construir `Board`, `Column`, `TaskCard` con estado dinámico y el formulario básico |
-| `sesion-06` | Sesión 6 — Integración | Conectar con la API real (`src/services/api.js`), `PrivateRoute`, envío del token |
+| `sesion-06` | Sesión 6 — React + conexión real a la API | Crear el proyecto Vite, construir `Board`, `Column`, `TaskCard` con estado dinámico y el formulario básico, y conectar desde el inicio a la API ya autenticada (`src/services/api.js`, `PrivateRoute`, login real) — el backend ya está completo (Sesiones 4-5), así que no hay ningún paso de datos simulados |
 | `sesion-07` | Sesión 7 — Despliegue | `README.md` final del proyecto y `.env.example` para la URL de la API de producción |
 
-Cada rama se creó a partir de la anterior, así que `git log --oneline` refleja la progresión real de la práctica del curso.
+Cada rama se creó a partir de la anterior, así que `git log --oneline` refleja la progresión real de la práctica del curso. Antes de la Sesión 6 no existe ninguna rama de este repo — el backend (`taskflow-backend`) se construye completo primero.
