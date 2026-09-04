@@ -1,11 +1,26 @@
-// TODO(sesion-04) — Paso 5: importa BrowserRouter, Routes y Route de
-// "react-router-dom", y Login, Register, Dashboard de "./pages/...".
-// Configura 3 rutas: "/login" -> Login, "/register" -> Register,
-// "/dashboard" -> Dashboard. No se implementa protección todavía (Sesión 6).
+import Dashboard from './pages/Dashboard';
 
+// Paso 5: borra el bloque de App() de abajo y descomenta el bloque comentado
+// completo (imports de react-router-dom/Login/Register incluidos), que
+// reemplaza el tablero fijo por las 3 rutas de TaskFlow.
 function App() {
-  // {{REEMPLAZAR}}
-  return null;
+  return <Dashboard />;
 }
+
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import Login from './pages/Login';
+// import Register from './pages/Register';
+//
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/login" element={<Login />} />
+//         <Route path="/register" element={<Register />} />
+//         <Route path="/dashboard" element={<Dashboard />} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
 
 export default App;

@@ -1,14 +1,28 @@
 import TaskCard from './TaskCard';
 
 function Column({ title, tasks, onCambiarEstado }) {
+  // Paso 3: borra el return de abajo y descomenta el bloque completo (el
+  // .map() que dibuja un TaskCard por cada tarea).
   return (
     <div className="column">
       <h3>{title}</h3>
-      {/* TODO(sesion-04): recorre "tasks" con .map() y renderiza un <TaskCard />
-          por cada una, pasando id, title, status y onCambiarEstado. No olvides
-          la prop "key" con el id de la tarea. */}
     </div>
   );
+
+  // return (
+  //   <div className="column">
+  //     <h3>{title}</h3>
+  //     {tasks.map((task) => (
+  //       <TaskCard
+  //         key={task.id}
+  //         id={task.id}
+  //         title={task.title}
+  //         status={task.status}
+  //         onCambiarEstado={onCambiarEstado}
+  //       />
+  //     ))}
+  //   </div>
+  // );
 }
 
 export default Column;

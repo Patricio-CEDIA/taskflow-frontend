@@ -6,18 +6,20 @@ function Board() {
   const [tasks, setTasks] = useState(mockTasks);
   const [nuevoTitulo, setNuevoTitulo] = useState('');
 
-  // TODO(sesion-04) — Paso 3: implementa cambiarEstado(id, nuevoEstado) usando
-  // setTasks con .map(), reemplazando solo la tarea cuyo id coincida.
-  const cambiarEstado = (id, nuevoEstado) => {
-    // {{REEMPLAZAR}}
-  };
+  // Paso 3: borra la línea de abajo y descomenta cambiarEstado() completo.
+  const cambiarEstado = () => {};
+  // const cambiarEstado = (id, nuevoEstado) => {
+  //   setTasks(tasks.map((t) => (t.id === id ? { ...t, status: nuevoEstado } : t)));
+  // };
 
-  // TODO(sesion-04) — Paso 4: implementa agregarTarea(e). Debe llamar a
-  // e.preventDefault(), ignorar títulos vacíos, agregar una tarea nueva con
-  // status "pendiente" usando setTasks([...tasks, ...]) y limpiar nuevoTitulo.
-  const agregarTarea = (e) => {
-    // {{REEMPLAZAR}}
-  };
+  // Paso 4: borra la línea de abajo y descomenta agregarTarea() completo.
+  const agregarTarea = (e) => { e.preventDefault(); };
+  // const agregarTarea = (e) => {
+  //   e.preventDefault();
+  //   if (!nuevoTitulo.trim()) return;
+  //   setTasks([...tasks, { id: Date.now(), title: nuevoTitulo, status: 'pendiente' }]);
+  //   setNuevoTitulo('');
+  // };
 
   const pendientes = tasks.filter((t) => t.status === 'pendiente');
   const enProgreso = tasks.filter((t) => t.status === 'en_progreso');

@@ -5,15 +5,21 @@ function TaskCard({ id, title, status, onCambiarEstado }) {
     completada: null,
   };
 
-  // TODO(sesion-04): completa el JSX de la tarjeta. Debe mostrar el título,
-  // el estado actual (span con className={`badge ${status}`}), y un botón
-  // "Avanzar" que llame a onCambiarEstado(id, siguiente[status]) — solo si
-  // siguiente[status] no es null (una tarea completada ya no avanza).
-  return (
-    <div className="task-card">
-      {/* {{REEMPLAZAR}} */}
-    </div>
-  );
+  // Paso 3: borra el return de abajo y descomenta el bloque completo
+  // (título + badge de estado + botón "Avanzar").
+  return <div className="task-card">{title}</div>;
+
+  // return (
+  //   <div className="task-card">
+  //     <h4>{title}</h4>
+  //     <span className={`badge ${status}`}>{status}</span>
+  //     {siguiente[status] && (
+  //       <button onClick={() => onCambiarEstado(id, siguiente[status])}>
+  //         Avanzar
+  //       </button>
+  //     )}
+  //   </div>
+  // );
 }
 
 export default TaskCard;

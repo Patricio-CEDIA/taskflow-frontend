@@ -4,9 +4,9 @@ Repo de arranque del frontend de TaskFlow para el curso *Desarrollo Ágil y Fram
 
 ## Cómo se usa este repo
 
-Cada rama `sesion-NN` es el punto de partida de la práctica de esa sesión: contiene el código ya construido en la práctica de la sesión **anterior**, más placeholders (`// TODO(sesion-NN): ...` o valores `{{REEMPLAZAR}}`) exactamente en los archivos que esa sesión debe completar.
+Cada rama `sesion-NN` es el punto de partida de la práctica de esa sesión: contiene el código ya construido en la práctica de la sesión **anterior**, más un bloque provisional (que ya funciona) y, comentado justo debajo, el bloque real que hay que descomentar en los archivos que esa sesión debe completar — ver `PLACEHOLDERS.md` de cada rama para el detalle. Nunca se deja el archivo sin compilar: siempre hay una versión activa, aunque sea básica.
 
-**Importante:** este repo no incluye el esqueleto completo que genera Vite (`vite.config.js` base, `index.html`, `public/`, etc. sí están, pero no cada archivo de configuración que Vite regenera solo). El flujo es:
+**Importante:** este repo no incluye el esqueleto completo que genera Vite (`vite.config.js`, `index.html` y `package.json` sí están, pero no cada archivo que Vite regenera solo, como `public/`). El flujo es:
 
 ```bash
 npm create vite@latest taskflow-frontend -- --template react   # Sesión 4, una sola vez
