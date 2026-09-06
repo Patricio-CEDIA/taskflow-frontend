@@ -8,15 +8,12 @@ function Register() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  // Paso 5: borra la línea de abajo y descomenta handleSubmit() completo
-  // (hace POST a /register, guarda el token real y navega al tablero).
-  const handleSubmit = (e) => { e.preventDefault(); };
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const response = await api.post('/register', { name, email, password });
-  //   localStorage.setItem('taskflow_token', response.data.token);
-  //   navigate('/dashboard');
-  // };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await api.post('/register', { name, email, password });
+    localStorage.setItem('taskflow_token', response.data.token);
+    navigate('/dashboard');
+  };
 
   return (
     <div>

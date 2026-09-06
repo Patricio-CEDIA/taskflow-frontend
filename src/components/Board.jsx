@@ -6,34 +6,24 @@ function Board() {
   const [tasks, setTasks] = useState([]);
   const [nuevoTitulo, setNuevoTitulo] = useState('');
 
-  // Paso 2: borra la línea de abajo y descomenta cambiarEstado() completo.
-  const cambiarEstado = () => {};
-  // const cambiarEstado = (id, nuevoEstado) => {
-  //   setTasks(tasks.map((t) => (t.id === id ? { ...t, status: nuevoEstado } : t)));
-  // };
+  const cambiarEstado = (id, nuevoEstado) => {
+    setTasks(tasks.map((t) => (t.id === id ? { ...t, status: nuevoEstado } : t)));
+  };
 
-  // Paso 3: borra la línea de abajo y descomenta agregarTarea() completo.
-  const agregarTarea = (e) => { e.preventDefault(); };
-  // const agregarTarea = (e) => {
-  //   e.preventDefault();
-  //   if (!nuevoTitulo.trim()) return;
-  //   setTasks([...tasks, { id: Date.now(), title: nuevoTitulo, status: 'pendiente' }]);
-  //   setNuevoTitulo('');
-  // };
+  const agregarTarea = (e) => {
+    e.preventDefault();
+    if (!nuevoTitulo.trim()) return;
+    setTasks([...tasks, { id: Date.now(), title: nuevoTitulo, status: 'pendiente' }]);
+    setNuevoTitulo('');
+  };
 
-  // Paso 3: borra la línea de abajo y descomenta eliminarTarea() completo
-  // (borra la tarea en la API y luego la quita del estado local).
-  const eliminarTarea = (id) => setTasks(tasks.filter((t) => t.id !== id));
-  // const eliminarTarea = (id) => {
-  //   api.delete(`/tasks/${id}`).then(() => setTasks(tasks.filter((t) => t.id !== id)));
-  // };
+  const eliminarTarea = (id) => {
+    api.delete(`/tasks/${id}`).then(() => setTasks(tasks.filter((t) => t.id !== id)));
+  };
 
-  // Paso 5: borra la línea de abajo y descomenta el useEffect completo, que
-  // carga las tareas reales desde la API al aparecer el tablero en pantalla.
-  useEffect(() => {}, []);
-  // useEffect(() => {
-  //   api.get('/tasks').then((response) => setTasks(response.data.data));
-  // }, []);
+  useEffect(() => {
+    api.get('/tasks').then((response) => setTasks(response.data.data));
+  }, []);
 
   const pendientes = tasks.filter((t) => t.status === 'pendiente');
   const enProgreso = tasks.filter((t) => t.status === 'en_progreso');
