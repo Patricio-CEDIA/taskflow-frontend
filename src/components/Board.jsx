@@ -21,6 +21,13 @@ function Board() {
   //   setNuevoTitulo('');
   // };
 
+  // Paso 3: borra la línea de abajo y descomenta eliminarTarea() completo
+  // (borra la tarea en la API y luego la quita del estado local).
+  const eliminarTarea = (id) => setTasks(tasks.filter((t) => t.id !== id));
+  // const eliminarTarea = (id) => {
+  //   api.delete(`/tasks/${id}`).then(() => setTasks(tasks.filter((t) => t.id !== id)));
+  // };
+
   // Paso 5: borra la línea de abajo y descomenta el useEffect completo, que
   // carga las tareas reales desde la API al aparecer el tablero en pantalla.
   useEffect(() => {}, []);
@@ -42,9 +49,9 @@ function Board() {
         />
         <button type="submit">Agregar</button>
       </form>
-      <Column title="Pendiente" tasks={pendientes} onCambiarEstado={cambiarEstado} />
-      <Column title="En progreso" tasks={enProgreso} onCambiarEstado={cambiarEstado} />
-      <Column title="Completada" tasks={completadas} onCambiarEstado={cambiarEstado} />
+      <Column title="Pendiente" tasks={pendientes} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
+      <Column title="En progreso" tasks={enProgreso} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
+      <Column title="Completada" tasks={completadas} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
     </div>
   );
 }

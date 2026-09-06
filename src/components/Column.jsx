@@ -1,6 +1,6 @@
 import TaskCard from './TaskCard';
 
-function Column({ title, tasks, onCambiarEstado }) {
+function Column({ title, tasks, onCambiarEstado, onEliminar }) {
   // Paso 2: borra el return de abajo y descomenta el bloque completo (el
   // .map() que dibuja un TaskCard por cada tarea).
   return (
@@ -19,6 +19,7 @@ function Column({ title, tasks, onCambiarEstado }) {
   //         title={task.title}
   //         status={task.status}
   //         onCambiarEstado={onCambiarEstado}
+  //         onEliminar={onEliminar}
   //       />
   //     ))}
   //   </div>

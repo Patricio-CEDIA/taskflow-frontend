@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import api from '../services/api';
 
 function Login() {
@@ -30,6 +30,9 @@ function Login() {
         />
         <button type="submit">Entrar</button>
       </form>
+      <p>
+        ¿No tienes cuenta? <Link to="/register">Crear cuenta</Link>
+      </p>
     </div>
   );
 }

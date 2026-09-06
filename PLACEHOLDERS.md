@@ -4,17 +4,16 @@ Punto de partida: proyecto Vite recién creado (Paso 1 de la práctica) — el r
 
 | Archivo | Qué descomentar | Paso de la práctica |
 |---|---|---|
-| `src/components/TaskCard.jsx` | El JSX completo de la tarjeta (título, badge de estado, botón "Avanzar") | Paso 2 |
+| `src/components/TaskCard.jsx` | El JSX completo de la tarjeta (título, badge de estado, botón "Avanzar" y botón "Eliminar") | Paso 2 |
 | `src/components/Column.jsx` | El JSX completo con el `.map()` que renderiza un `TaskCard` por tarea | Paso 2 |
-| `src/components/Board.jsx` | `cambiarEstado()`, `agregarTarea()` y el `useEffect` que carga las tareas reales | Pasos 2, 3 y 5 |
+| `src/components/Board.jsx` | `cambiarEstado()`, `agregarTarea()`, `eliminarTarea()` y el `useEffect` que carga las tareas reales | Pasos 2, 3 y 5 |
 | `src/App.jsx` | Las rutas `/login`, `/register`, `/dashboard` (esta última envuelta en `PrivateRoute`) | Paso 4 |
 | `src/services/api.js` | La instancia real de `axios` con el interceptor de token | Paso 5 |
 | `src/pages/Login.jsx` | `handleSubmit`: `POST /login`, guardar el token, navegar a `/dashboard` | Paso 5 |
+| `src/pages/Register.jsx` | `handleSubmit`: `POST /register`, guardar el token, navegar a `/dashboard` | Paso 5 |
 | `src/components/PrivateRoute.jsx` | La verificación del token guardado | Paso 6 |
 
 En cada archivo, primero se **borra** el bloque provisional (el que ya está activo) y luego se **descomenta** el bloque de abajo — nunca dejes los dos activos a la vez, o el archivo queda con dos declaraciones del mismo nombre. Atajo del editor para descomentar un bloque seleccionado: `Ctrl+/` en Windows/Linux, `Cmd+/` en Mac.
-
-`src/pages/Register.jsx` ya viene lista para esta sesión (se completa como parte de la Tarea 3, más adelante).
 
 ## Comando de arranque
 

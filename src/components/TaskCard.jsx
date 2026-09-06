@@ -1,4 +1,4 @@
-function TaskCard({ id, title, status, onCambiarEstado }) {
+function TaskCard({ id, title, status, onCambiarEstado, onEliminar }) {
   const siguiente = {
     pendiente: 'en_progreso',
     en_progreso: 'completada',
@@ -6,7 +6,7 @@ function TaskCard({ id, title, status, onCambiarEstado }) {
   };
 
   // Paso 2: borra el return de abajo y descomenta el bloque completo
-  // (título + badge de estado + botón "Avanzar").
+  // (título + badge de estado + botón "Avanzar" + botón "Eliminar").
   return <div className="task-card">{title}</div>;
 
   // return (
@@ -18,6 +18,7 @@ function TaskCard({ id, title, status, onCambiarEstado }) {
   //         Avanzar
   //       </button>
   //     )}
+  //     <button onClick={() => onEliminar(id)} className="btn-eliminar">🗑</button>
   //   </div>
   // );
 }
