@@ -6,7 +6,7 @@ Punto de partida: proyecto Vite recién creado (Paso 1 de la práctica) — el r
 |---|---|---|
 | `src/components/TaskCard.jsx` | El JSX completo de la tarjeta (título, badge de estado, botón "Avanzar" y botón "Eliminar") | Paso 2 |
 | `src/components/Column.jsx` | El JSX completo con el `.map()` que renderiza un `TaskCard` por tarea | Paso 2 |
-| `src/components/Board.jsx` | `cambiarEstado()`, `agregarTarea()`, `eliminarTarea()` y el `useEffect` que carga las tareas reales | Pasos 2, 3 y 5 |
+| `src/components/Board.jsx` | `cambiarEstado()`, `agregarTarea()`, `eliminarTarea()` y el `useEffect` que carga las tareas reales; en el Paso 5 hay una segunda versión de `cambiarEstado()`/`agregarTarea()` que las conecta a la API (`api.patch`/`api.post`) en vez de dejarlas solo en estado local | Pasos 2, 3 y 5 |
 | `src/App.jsx` | Las rutas `/login`, `/register`, `/dashboard` (esta última envuelta en `PrivateRoute`) | Paso 4 |
 | `src/services/api.js` | La instancia real de `axios` con el interceptor de token | Paso 5 |
 | `src/pages/Login.jsx` | `handleSubmit`: `POST /login`, guardar el token, navegar a `/dashboard` | Paso 5 |

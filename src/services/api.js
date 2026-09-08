@@ -4,6 +4,8 @@
 const api = {
   get: () => Promise.resolve({ data: { data: [] } }),
   post: () => Promise.resolve({ data: { token: null } }),
+  patch: () => Promise.resolve({ data: { data: {} } }),
+  delete: () => Promise.resolve({ data: {} }),
 };
 
 // import axios from 'axios';
