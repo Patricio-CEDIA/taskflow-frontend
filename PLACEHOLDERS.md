@@ -1,6 +1,6 @@
 # Placeholders de esta rama (sesion-07)
 
-Punto de partida: TaskFlow conectado a la API real y con `/dashboard` protegido, incluyendo crear/editar/eliminar/cambiar-estado de tareas y registro (Sesión 6) — todo resuelto en esta rama, incluyendo el cambio de la URL de la API a una variable de entorno (`VITE_API_URL`).
+Punto de partida: TaskFlow conectado a la API real y con `/dashboard` protegido, incluyendo crear/eliminar/cambiar-estado de tareas y registro (Sesión 6) — todo resuelto en esta rama, incluyendo el cambio de la URL de la API a una variable de entorno (`VITE_API_URL`). Editar una tarea existente queda fuera de esta rama: es la Tarea 3.
 
 | Archivo | Qué reemplazar |
 |---|---|

@@ -21,7 +21,7 @@ npm run dev
 
 | Rama | Punto de partida para | Qué agrega/completa esa sesión |
 |---|---|---|
-| `sesion-06` | Sesión 6 — React + conexión real a la API | Crear el proyecto Vite, construir `Board`, `Column`, `TaskCard` con estado dinámico y el formulario básico, crear/editar/eliminar/cambiar-estado de una tarea, registro de usuario, y conectar desde el inicio a la API ya autenticada (`src/services/api.js`, `PrivateRoute`, login/registro reales) |
+| `sesion-06` | Sesión 6 — React + conexión real a la API | Crear el proyecto Vite, construir `Board`, `Column`, `TaskCard` con estado dinámico y el formulario básico, crear/eliminar/cambiar-estado de una tarea, registro de usuario, y conectar desde el inicio a la API ya autenticada (`src/services/api.js`, `PrivateRoute`, login/registro reales) — editar una tarea existente es la Tarea 3 |
 | `sesion-07` | Sesión 7 — Despliegue | `README.md` final del proyecto y `.env.example` para la URL de la API de producción |
 
 Cada rama se creó a partir de la anterior, así que `git log --oneline` refleja la progresión real de la práctica del curso. Antes de la Sesión 6 no existe ninguna rama de este repo — el backend (`taskflow-backend`) se construye completo primero (Sesiones 4-5).

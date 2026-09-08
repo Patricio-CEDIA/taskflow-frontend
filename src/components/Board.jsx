@@ -7,14 +7,15 @@ function Board() {
   const [nuevoTitulo, setNuevoTitulo] = useState('');
 
   const cambiarEstado = (id, nuevoEstado) => {
-    setTasks(tasks.map((t) => (t.id === id ? { ...t, status: nuevoEstado } : t)));
+    api.patch(`/tasks/${id}`, { status: nuevoEstado })
+       .then(() => setTasks(tasks.map((t) => (t.id === id ? { ...t, status: nuevoEstado } : t))));
   };
 
   const agregarTarea = (e) => {
     e.preventDefault();
     if (!nuevoTitulo.trim()) return;
-    setTasks([...tasks, { id: Date.now(), title: nuevoTitulo, status: 'pendiente' }]);
-    setNuevoTitulo('');
+    api.post('/tasks', { title: nuevoTitulo, status: 'pendiente' })
+       .then((response) => { setTasks([...tasks, response.data.data]); setNuevoTitulo(''); });
   };
 
   const eliminarTarea = (id) => {
