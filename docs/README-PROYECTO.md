@@ -17,5 +17,7 @@
 ## Build de producción
 
 ```bash
-{{REEMPLAZAR: npm run build, y dónde se despliega la carpeta dist/}}
+npm run build
 ```
+
+`npm run build` genera `dist/` con los archivos estáticos ya optimizados. En este proyecto no se sube a mano: el workflow `.github/workflows/deploy-pages.yml` corre ese mismo comando en cada push a `main` y publica el resultado en GitHub Pages, en `https://{{REEMPLAZAR: usuario}}.github.io/taskflow-frontend/` (o en el dominio propio configurado en Settings → Pages).
