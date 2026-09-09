@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import api from '../services/api';
 import Column from './Column';
-import './board.css';
+import '../styles/board.css';
 
 function Board() {
   const [tasks, setTasks] = useState([]);
