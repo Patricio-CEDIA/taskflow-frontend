@@ -1,10 +1,114 @@
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-danger: #ef4444;
+  --color-text: #1f2937;
+  --color-bg: #f4f5f7;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 24px;
-  background: #f4f5f7;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 14px;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: var(--color-primary-dark);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+input {
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+/* --- Encabezado del tablero (Paso 0) --- */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.app-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.btn-logout {
+  background: transparent;
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+}
+
+.btn-logout:hover {
+  background: var(--color-danger);
+  color: white;
+}
+
+/* --- Login / Registro (Paso 0) --- */
+.auth-page {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 320px;
+  animation: fadeIn 0.25s ease;
+}
+
+.auth-card h2 {
+  margin-top: 0;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-card button {
+  margin-top: 4px;
+}
+
+/* --- Tablero --- */
 .board {
   display: flex;
   flex-wrap: wrap;
@@ -19,14 +123,13 @@ body {
 
 .board input {
   flex: 1;
-  padding: 8px 10px;
 }
 
 .column {
   flex: 1;
   min-width: 220px;
   background: #ebecf0;
-  border-radius: 8px;
+  border-radius: var(--radius);
   padding: 12px;
   min-height: 200px;
 }
@@ -41,6 +144,13 @@ body {
   padding: 10px 12px;
   margin-bottom: 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .task-card h4 {
@@ -70,7 +180,23 @@ body {
 .btn-eliminar {
   background: none;
   border: none;
-  cursor: pointer;
+  color: inherit;
   font-size: 14px;
   margin-left: 6px;
+  padding: 4px;
+}
+
+.btn-eliminar:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
