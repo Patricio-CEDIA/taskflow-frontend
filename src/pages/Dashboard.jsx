@@ -15,8 +15,8 @@ function Dashboard() {
   return (
     <div>
       <header className="app-header">
-        <h1>TaskFlow</h1>
-        <button onClick={cerrarSesion} className="btn-logout">Cerrar sesión</button>
+        <h1>📋 TaskFlow</h1>
+        <button onClick={cerrarSesion} className="btn-logout">🚪 Cerrar sesión</button>
       </header>
       <Board />
     </div>

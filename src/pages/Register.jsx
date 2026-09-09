@@ -22,6 +22,7 @@ function Register() {
   return (
     <div className="auth-page">
       <div className="auth-card">
+        <p className="brand">📋 TaskFlow</p>
         <h2>Crear cuenta</h2>
         <form onSubmit={handleSubmit}>
           <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" />

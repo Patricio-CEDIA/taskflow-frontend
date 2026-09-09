@@ -17,8 +17,19 @@
   animation: fadeIn 0.25s ease;
 }
 
+.auth-card .brand {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 4px;
+}
+
 .auth-card h2 {
   margin-top: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: normal;
 }
 
 .auth-card form {

@@ -21,6 +21,7 @@ function Login() {
   return (
     <div className="auth-page">
       <div className="auth-card">
+        <p className="brand">📋 TaskFlow</p>
         <h2>Iniciar sesión</h2>
         <form onSubmit={handleSubmit}>
           <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />

@@ -39,11 +39,11 @@ function Board() {
           onChange={(e) => setNuevoTitulo(e.target.value)}
           placeholder="Nueva tarea"
         />
-        <button type="submit">Agregar</button>
+        <button type="submit">➕ Agregar</button>
       </form>
-      <Column title="Pendiente" tasks={pendientes} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
-      <Column title="En progreso" tasks={enProgreso} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
-      <Column title="Completada" tasks={completadas} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
+      <Column title={`📋 Pendiente (${pendientes.length})`} tasks={pendientes} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
+      <Column title={`🔄 En progreso (${enProgreso.length})`} tasks={enProgreso} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
+      <Column title={`✅ Completada (${completadas.length})`} tasks={completadas} onCambiarEstado={cambiarEstado} onEliminar={eliminarTarea} />
     </div>
   );
 }
